@@ -1,0 +1,43 @@
+git init
+git remote add origin https://github.com/robsieljes/toetsVersiebeheer
+touch index.html
+git add index.html
+git commit -m "index pagina toegevoegd"
+
+-- veranderingen aangebracht aan index.html
+
+git add index.html
+git commit -m "citaat toegevoegd"
+
+git branch zandbak master
+git checkout zandbak
+
+git add mattew-bellamy.jpg
+git commit -m "foto toegevoegd"
+
+-- header toegevoegd aan index.html
+
+// dit ging goed fout! teruggedraaid
+git add index.html
+git commit -m "heading toegevoegd aan index.html"
+
+git add index.html
+git commit -m "header weer verwijderd, zat in verkeerde branch"
+// oke, en nu weer verder
+
+git checkout master
+git add index.html
+git commit -m "header toegevoegd"
+
+git checkout zandbak
+git rebase
+
+git checkout master
+
+git add commands.log
+git commit -m "commands.log toegevoegd"
+
+git push origin master
+
+git checkout zandbak
+git push zandbak master
